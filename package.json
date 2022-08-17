@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-emotion": "^11.0.0",
     "jest": "^27.5.1"
   }
 }
