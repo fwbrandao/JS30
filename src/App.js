@@ -1,51 +1,80 @@
+import React from 'react';
 import styled from 'styled-components';
-import DrumKit from './components/projects/drumKit';
-import BackgroundImage from "../src/utils/images/gig.jpg";
+import Card from './core/card';
 
 function App() {
   return (
-    <AppWrapper>
-      <AppHeader>
-        <h3>JavaScrypt 30 Dashboard</h3>
-      </AppHeader>
-      <Grid>
-        <Item>
-          <DrumKit />
-        </Item>
-        <Item>Content2</Item>
-        <Item>Content3</Item>
-      </Grid>
-      
-    </AppWrapper>
+    <>
+      <NavBar><h2 style={{ color: "white" }}>JavaScrypt 30</h2></NavBar>
+      <Wrapper>
+        <Grid>
+          <Card>
+            one
+          </Card>
+          <Card>
+            one
+          </Card>
+          <Card>
+            one
+          </Card>
+          <Card>
+            one
+          </Card>
+          <Card>
+            one
+          </Card>
+          <Card>
+            one
+          </Card>
+        </Grid>
+      </Wrapper>
+      <Footer>
+        <CardLink>Fernando Brandao</CardLink>
+      </Footer>
+    </>
   );
-}
+};
 
-const AppWrapper = styled.div`
-  text-align: center;
+const NavBar = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  background-color: rgb(0,191,255);
+  border-radius: 3px;
 `;
 
-const AppHeader = styled.header`
-  background-color: #282c34;
-  max-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+const Wrapper = styled.div`
+  padding: 20px;
+  margin-top: 100px;
+  height: 100vh;
+}
 `;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 150px 150px;
-  grid-gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 200px;
+  grid-gap: 10px;
 `;
 
-const Item = styled.div`
+const CardLink = styled.a`
+  display: inline-block;
+  font-size: 15px;
+  text-decoration: none;
+  color: #aaa;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: color 0.25s ease-in;
+  margin-bottom: 20px;
+
+  &:hover {
+    color: #777;
+  }
+`;
+
+const Footer = styled.div`
   display: flex;
   justify-content: center;
-  padding: .5rem;
 `;
 
 export default App;
