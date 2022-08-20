@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { DrumKit } from './components/projects';
 import Card from './core/card';
 
 function App() {
@@ -9,22 +10,7 @@ function App() {
       <Wrapper>
         <Grid>
           <Card>
-            one
-          </Card>
-          <Card>
-            one
-          </Card>
-          <Card>
-            one
-          </Card>
-          <Card>
-            one
-          </Card>
-          <Card>
-            one
-          </Card>
-          <Card>
-            one
+            <DrumKit />
           </Card>
         </Grid>
       </Wrapper>
@@ -46,7 +32,7 @@ const NavBar = styled.div`
 const Wrapper = styled.div`
   padding: 20px;
   margin-top: 100px;
-  height: 100vh;
+  height: 100%;
 }
 `;
 

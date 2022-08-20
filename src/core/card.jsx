@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Card = () => {
-  return(
+const Card = ({ children }) => {
+  return (
     <Item>
-      <div>one</div>
+      {children}
     </Item>
   )
-}
+};
+
 
 const Item = styled.div`
   overflow: hidden;
